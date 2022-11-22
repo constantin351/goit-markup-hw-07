@@ -1,0 +1,131 @@
+.page-header {
+    border-bottom: 1px solid #ececec;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    color: #000000;
+    margin-right: 93px;
+}
+
+.logo-part--blue {
+    color: $accent-color;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.nav__list {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.nav__link {
+    color: $title-text-color;
+    text-decoration: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+    transition: color 250ms $transition-timing-function;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
+
+// .nav__link:hover,
+// .nav__link:focus,
+.nav__link-studio,
+.nav__link-portfolio {
+    color: $accent-color;
+}
+
+// HEADER current link underliner
+.nav__item {
+    position: relative;
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+// .nav__item:not(:last-child) {
+//     margin-right: 50px;
+// }
+
+.nav__link-studio::after {
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 4px;
+    background: $accent-color;
+    border-radius: 2px;
+}
+
+.nav__link-portfolio::after {
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78px;
+    height: 4px;
+    background: $accent-color;
+    border-radius: 2px;
+}
+
+.page-header__contact-list {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+// email + phone number
+.page-header__link {
+    padding: 32px 0;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: fill 250ms $transition-timing-function,
+        color 250ms $transition-timing-function;
+
+    &:hover, &:focus {
+        fill: $accent-color;
+        color: $accent-color;
+    }
+}
+
+// .page-header__link:hover,
+// .page-header__link:focus {
+//     fill: var(--accent-color);
+//     color: var(--accent-color);
+// }
+
+// .page-header li
+.nav__item,
+.page-header__item {
+    display: inline;
+}
+
+.page-header__icon {
+    vertical-align: middle;
+    fill: currentColor;
+    margin-right: 10px;
+}
